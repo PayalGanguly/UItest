@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="IconsUI/icofont/icofont.min.css">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Progress bar</title>
+
+  <style> 
+.progress-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: #011627;
+    margin: 0 0 20px;
+}
+.progress{
+    height: 20px;
+    background: #cbcbcb;
+    border-radius: 18px;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible;
+}
+.progress .progress-bar{
+    border-radius: 18px;
+    box-shadow: none;
+    float: right;
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s;
+}
+.progress .progress-bar:after{
+    content: "";
+    display: block;
+    border: 10px solid transparent ;
+    border-top: 21px solid transparent;
+    position: absolute;
+    top: -18px;
+    left: -9px;
+}
+.progress .progress-value{
+    font-size: 15px;
+    font-weight: bold;
+    float: left;
+    color: #000;
+    position: relative;
+    top: -40px;
+    right: 0;
+}
+.progress.travel .progress-bar:after{
+    border-top-color: grey;
+}
+.progress.green .progress-bar:after{
+    border-top-color: grey;
+}
+.progress.yellow .progress-bar:after{
+    border-top-color: grey;
+}
+.progress.blue .progress-bar:after{
+    border-top-color: grey;
+}
+@-webkit-keyframes animate-positive{
+    0% { width: 0; }
+}
+@keyframes animate-positive{
+    0% { width: 0; }
+}
+.addfading{
+
+text-align:right;
+background-color:rgba(0,0,0,0);
+background-image: linear-gradient(to right, rgba(255, 0, 0, 0.247), rgba(255,0,0,1));
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="progress-title"><br><br><i class="icofont-travelling"></i>     Travel</h3>
+                <div class="progress justify-tent-end travel">
+                <div class="progress justify-content-end travel">
+                    <div class="progress-bar addfading" style="width:75%; ">
+                        <div class="progress-value">Rs.50,000</div>
+                    </div>
+                </div>
+                <h3 class="progress-title"><i class="icofont-shopify"> &emsp; <b>Shopping</b></i></h3>
+                <div class="progress travel">
+                    <div class="progress-bar addfading" style="width:50%;">
+                        <div class="progress-value">Rs.20,000</div>
+                    </div>
+                </div>
+                
+                <h3 class="progress-title"><i class="icofont-mastercard"></i>Credit Card <br> Payment</h3>
+                <div class="progress green">
+                    <div class="progress-bar addfading" style="width:40%;">
+                        <div class="progress-value">Rs.15,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
